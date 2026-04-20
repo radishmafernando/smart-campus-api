@@ -9,8 +9,10 @@ import java.net.URI;
 
 public class Main {
 
-    // Root URI — the /api/v1 context path is declared via @ApplicationPath in SmartCampusApplication
-    public static final String BASE_URI = "http://localhost:8080/";
+    // Grizzly uses this URI as the application mount point.
+    // @ApplicationPath("/api/v1") in SmartCampusApplication satisfies the spec requirement;
+    // with Grizzly standalone the BASE_URI here is what actually controls the path.
+    public static final String BASE_URI = "http://localhost:8080/api/v1/";
 
     public static void main(String[] args) throws IOException {
         ResourceConfig config = ResourceConfig.forApplication(new SmartCampusApplication());
