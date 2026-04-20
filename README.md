@@ -1,7 +1,7 @@
 # Smart Campus Sensor & Room Management API
 
 **Module:** 5COSC022W — Client-Server Architectures  
-**Student:** [Your Name] | [Your Student ID]  
+**Student:** Shenali Radishma Fernando | w2120071  
 **Technology:** Java 11, JAX-RS (Jersey 2.41), Grizzly HTTP Server  
 **Base URL:** `http://localhost:8080/api/v1`
 
@@ -51,7 +51,10 @@ You should see:
 ```
 =====================================================
   Smart Campus API is running!
-  Base URL : http://localhost:8080/api/v1
+  Base URL  : http://localhost:8080/api/v1
+  Discovery : http://localhost:8080/api/v1
+  Rooms     : http://localhost:8080/api/v1/rooms
+  Sensors   : http://localhost:8080/api/v1/sensors
   Press ENTER to stop the server...
 =====================================================
 ```
@@ -65,7 +68,7 @@ Open a new terminal and try the curl commands below.
 
 ### 1. Discover the API
 ```bash
-curl -X GET http://localhost:8080/api/v1/
+curl -X GET http://localhost:8080/api/v1
 ```
 **Expected response (200 OK):**
 ```json
