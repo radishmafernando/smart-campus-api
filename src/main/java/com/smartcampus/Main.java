@@ -9,8 +9,8 @@ import java.net.URI;
 
 public class Main {
 
-    // The full base URI including the api/v1 path
-    public static final String BASE_URI = "http://localhost:8080/api/v1/";
+    // Root URI — the /api/v1 context path is declared via @ApplicationPath in SmartCampusApplication
+    public static final String BASE_URI = "http://localhost:8080/";
 
     public static void main(String[] args) throws IOException {
         ResourceConfig config = ResourceConfig.forApplication(new SmartCampusApplication());
@@ -22,7 +22,8 @@ public class Main {
 
         System.out.println("=====================================================");
         System.out.println("  Smart Campus API is running!");
-        System.out.println("  Discovery : http://localhost:8080/api/v1/info");
+        System.out.println("  Base URL  : http://localhost:8080/api/v1");
+        System.out.println("  Discovery : http://localhost:8080/api/v1");
         System.out.println("  Rooms     : http://localhost:8080/api/v1/rooms");
         System.out.println("  Sensors   : http://localhost:8080/api/v1/sensors");
         System.out.println("  Press ENTER to stop the server...");
